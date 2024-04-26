@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Foodistan</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+    
+    header {
+      background-color: #ffcc00;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    header a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    
+    main {
+      padding: 20px;
+    }
+    
+    footer {
+      background-color: #333333;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    form {
+      margin-bottom: 20px;
+    }
+    
+    form h2 {
+      margin-bottom: 10px;
+    }
+    
+    form input[type="text"],
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .recipe {
+      margin-bottom: 20px;
+    }
+    
+    .recipe img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .recipe h3 {
+      margin-top: 10px;
+    }
+    
+    .recipe p {
+      margin-bottom: 10px;
+    }
+    
+    .recipe button {
+      background-color: #ffcc00;
+      color: #ffffff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .recipe button:hover {
+      background-color: #ff9900;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+  </header>
+  
+  <main>
+    <section id="home">
+      <img src="https://cdn.dribbble.com/users/4913590/screenshots/15283932/media/b430f8df20aa4f1cc96e412c68db44d2.jpg" alt="Foodistan Logo">
+      <img src="https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/restaurant%2F649660%2Frestaurant020220816105121.jpg" alt="Restaurant Image">
+    </section>
+    
+    <section id="menu">
+      <div class="recipe">
+        <img src="https://littlesunnykitchen.com/wp-content/uploads/Chicke-tikka-masala-2-7.jpg" alt="Butter Chicken">
+        <h3>Butter Chicken</h3>
+        <p>Price: $10</p>
+        <button onclick="viewIngredients('Butter Chicken')">View Ingredients</button>
+        <button onclick="order('Butter Chicken')">Order</button>
+      </div>
+      
+      <div class="recipe">
+        <img src="https://minimalistbaker.com/wp-content/uploads/2018/10/Vegan-Palak-Paneer-SQUARE.jpg" alt="Palak Paneer">
+        <h3>Palak Paneer</h3>
+        <p>Price: $8</p>
+        <button onclick="viewIngredients('Palak Paneer')">View Ingredients</button>
+        <button onclick="order('Palak Paneer')">Order</button>
+      </div>
+      
+      <div class="recipe">
+        <img src="https://assets.limetray.com/assets/user_images/menus/compressed/1636789829_Tandoorichickennew.jpg" alt="Biryani">
+        <h3>Biryani</h3>
+        <p>Price: $12</p>
+        <button onclick="viewIngredients('Biryani')">View Ingredients</button>
+        <button onclick="order('Biryani')">Order</button>
+      </div>
+      
+      <div class="recipe">
+        <img src="https://thumbs.dreamstime.com/b/chole-bhature-dark-background-served-laccha-onions-pickle-buttermilk-restaurant-style-304060489.jpg" alt="Chole Bhature">
+        <h3>Chole Bhature</h3>
+        <p>Price: $6</p>
+        <button onclick="viewIngredients('Chole Bhature')">View Ingredients</button>
+        <button onclick="order('Chole Bhature')">Order</button>
+      </div>
+    </section>
+    
+    <section id="about">
+      <h2>About Foodistan</h2>
+      <p>A short description of the service and how the visitor will benefit from it.</p>
+      <p>A short description of the benefit.</p>
+    </section>
+    
+    <form>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+  </main>
+  
+  <footer>
+    &copy; 2024 Foodistan. All rights reserved.
+  </footer>
+  
+  <script>
+    function viewIngredients(recipe) {
+      // Add code to show the ingredients of the selected recipe
+      console.log('View Ingredients: ' + recipe);
+    }
+    
+    function order(recipe) {
+      // Add code to place an order for the selected recipe
+      console.log('Order: ' + recipe);
+    }
+  </script>
+</body>
+</html>
